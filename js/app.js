@@ -61,11 +61,11 @@
 
 // Get all the images on the page and add them to an array.
 const pics = document.getElementsByClassName("card-img-top");
-let imageList = []
+let imageList = [];
 for (let i = 0; i < pics.length; i++) {
-  const itemPicture = pics[i].src
+  const itemPicture = pics[i].src;
   imageList.push(itemPicture);
-}
+};
 
 
 // for (let i = 0; i < pics.length; i++) {
@@ -115,7 +115,8 @@ for (let i = 0; i < pics.length; i++) {
 //   }
 // }
 
-const myModal = (event) => {
+(function () {
+  const myModal = (event) => {
   const toShow = document.querySelector(".lightbox-container");
   const showItem = document.querySelector(".lightbox-item");
   const closeButton = document.querySelector(".lightbox-close");
@@ -161,4 +162,5 @@ const myModal = (event) => {
 
 for (let i = 0; i < pics.length; i++) {
   pics[i].addEventListener("click", myModal);
-}
+};
+})();
